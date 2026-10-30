@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - EthioTech Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <h2><a href="index.html"><i class="fa-solid fa-code"></i> EthioTech Hub</a></h2>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="add-project.html"><i class="fa-solid fa-plus"></i> Add Project</a>
+            <a href="login.html">Login</a>
+            <!-- Dark Mode Toggle Button -->
+            <button id="themeToggle" class="theme-btn" title="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Register Form Container -->
+    <main class="container">
+        <div class="form-card auth-card">
+            <h2><i class="fa-solid fa-user-plus"></i> Create an Account</h2>
+            <p class="form-subtitle">Join EthioTech Hub to share and collaborate on projects.</p>
+
+            <form action="register.php" method="POST">
+                <div class="form-group">
+                    <label for="username">Full Name / Username *</label>
+                    <input type="text" id="username" name="username" placeholder="e.g., Hailiye Abiti" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="e.g., hailiye@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+                </div>
+
+                <button type="submit" class="btn-submit"><i class="fa-solid fa-user-check"></i> Register</button>
+            </form>
+
+            <p class="auth-redirect">
+                Already have an account? <a href="login.html">Login here</a>
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 EthioTech Hub. Built for Internship Showcase.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
