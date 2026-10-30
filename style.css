@@ -261,3 +261,134 @@ footer {
 .btn-submit:hover {
     background: #1d4ed8;
 }
+
+/* Detail Page Styles */
+.detail-container {
+    max-width: 900px;
+}
+
+.btn-back {
+    display: inline-block;
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.btn-back:hover {
+    color: #2563eb;
+}
+
+.project-detail-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.detail-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.detail-body {
+    padding: 30px;
+}
+
+.detail-body h1 {
+    margin: 12px 0 8px 0;
+    color: #1f2937;
+}
+
+.project-author {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.description-box h3, .comments-section h3 {
+    color: #1f2937;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.description-box p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn-github {
+    display: inline-block;
+    background: #1f2937;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-github:hover {
+    background: #111827;
+}
+
+/* Comments Styling */
+.comments-section {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.comment-form {
+    margin: 20px 0;
+}
+
+.comment-form input, .comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    outline: none;
+}
+
+.btn-comment {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-comment:hover {
+    background: #1d4ed8;
+}
+
+.comment-item {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #2563eb;
+    margin-top: 15px;
+}
+
+.comment-item h4 {
+    font-size: 0.95rem;
+    color: #1f2937;
+}
+
+.comment-item p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin: 5px 0;
+}
+
+.comment-date {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
