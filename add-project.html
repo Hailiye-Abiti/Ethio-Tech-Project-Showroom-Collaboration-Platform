@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Project - EthioTech Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <h2><i class="fa-solid fa-code"></i> EthioTech Hub</h2>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="add-project.html" class="active"><i class="fa-solid fa-plus"></i> Add Project</a>
+            <a href="login.html" class="btn-login">Login</a>
+        </nav>
+    </header>
+
+    <!-- Form Section -->
+    <main class="container">
+        <div class="form-card">
+            <h2><i class="fa-solid fa-folder-plus"></i> Submit Your Project</h2>
+            <p class="form-subtitle">Share your creation with the developer community and internship recruiters.</p>
+
+            <form id="addProjectForm">
+                <div class="form-group">
+                    <label for="projectTitle">Project Title *</label>
+                    <input type="text" id="projectTitle" placeholder="e.g., Student Feedback System" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="techStack">Technologies Used (Tech Stack) *</label>
+                    <input type="text" id="techStack" placeholder="e.g., PHP, MySQL, JavaScript, HTML/CSS" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectLink">Live Demo or GitHub Link</label>
+                    <input type="url" id="projectLink" placeholder="https://github.com/username/project">
+                </div>
+
+                <div class="form-group">
+                    <label for="imageUrl">Project Screenshot / Image URL</label>
+                    <input type="url" id="imageUrl" placeholder="https://example.com/image.png">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Project Description *</label>
+                    <textarea id="description" rows="5" placeholder="Explain what problem your project solves, key features, and implementation details..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Publish Project</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ethio-Tech Hub. Built for Internship Showcase.</p>
+    </footer>
+
+</body>
+</html>
