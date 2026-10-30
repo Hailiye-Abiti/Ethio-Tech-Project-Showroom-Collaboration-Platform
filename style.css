@@ -387,7 +387,27 @@ footer {
     color: #4b5563;
     margin: 5px 0;
 }
+/* Auth Pages Styling */
+.auth-card {
+    max-width: 450px !important;
+}
 
+.auth-redirect {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.auth-redirect a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-redirect a:hover {
+    text-decoration: underline;
+}
 .comment-date {
     font-size: 0.75rem;
     color: #9ca3af;
