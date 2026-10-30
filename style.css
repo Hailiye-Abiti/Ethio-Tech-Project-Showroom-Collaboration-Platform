@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header .logo h2 {
+    color: #2563eb;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #4b5563;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+header nav a:hover, header nav a.active {
+    color: #2563eb;
+}
+
+header nav .btn-login {
+    background: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+header nav .btn-login:hover {
+    background: #1d4ed8;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-box input {
+    width: 70%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-box button {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-box button:hover {
+    background: #059669;
+}
+
+/* Main Container & Cards */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.container > h2 {
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.tech-badge {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.card-content h3 {
+    margin: 10px 0 8px 0;
+    font-size: 1.2rem;
+    color: #1f2937;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 12px;
+}
+
+.author {
+    font-size: 0.85rem;
+    color: #4b5563;
+}
+
+.btn-details {
+    text-decoration: none;
+    background: #f3f4f6;
+    color: #2563eb;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.btn-details:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f2937;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
