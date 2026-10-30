@@ -412,3 +412,112 @@ footer {
     font-size: 0.75rem;
     color: #9ca3af;
 }
+
+/* --- Header & Theme Toggle Button Styles --- */
+header .logo a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-btn {
+    background: transparent;
+    border: 1px solid #d1d5db;
+    color: #4b5563;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: #f3f4f6;
+    color: #2563eb;
+}
+
+/* --- Dark Mode Variables & Classes --- */
+body.dark-mode {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+body.dark-mode header {
+    background-color: #1f2937;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+body.dark-mode header nav a {
+    color: #9ca3af;
+}
+
+body.dark-mode header nav a:hover, 
+body.dark-mode header nav a.active {
+    color: #60a5fa;
+}
+
+body.dark-mode .theme-btn {
+    border-color: #374151;
+    color: #9ca3af;
+}
+
+body.dark-mode .theme-btn:hover {
+    background: #374151;
+    color: #60a5fa;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .form-card,
+body.dark-mode .comments-section,
+body.dark-mode .comment-item {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .project-card img {
+    opacity: 0.9;
+}
+
+body.dark-mode .card-content h3,
+body.dark-mode .form-card h2,
+body.dark-mode .detail-body h1,
+body.dark-mode .description-box h3,
+body.dark-mode .comments-section h3,
+body.dark-mode .comment-item h4 {
+    color: #f9fafb;
+}
+
+body.dark-mode .card-content p,
+body.dark-mode .project-author,
+body.dark-mode .description-box p,
+body.dark-mode .comment-item p,
+body.dark-mode .form-subtitle {
+    color: #9ca3af;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea,
+body.dark-mode .comment-form input,
+body.dark-mode .comment-form textarea {
+    background-color: #111827;
+    border-color: #374151;
+    color: #f3f4f6;
+}
+
+body.dark-mode .tech-badge {
+    background: #1e3a8a;
+    color: #93c5fd;
+}
