@@ -22,6 +22,10 @@
              <button id="themeToggle" class="theme-btn" title="Toggle Dark/Light Mode">
                 <i class="fa-solid fa-moon"></i>
             </button>
+            <div class="lang-switch" style="display: inline-flex; gap: 5px;">
+    <button onclick="changeLanguage('en')" id="btnEn" style="background: #2563eb; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: bold;">EN</button>
+    <button onclick="changeLanguage('am')" id="btnAm" style="background: #e5e7eb; color: #374151; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: bold;">አማ</button>
+</div>
         </nav>
     </header>
 
@@ -31,38 +35,38 @@
             <h2><i class="fa-solid fa-folder-plus"></i> Submit Your Project</h2>
             <p class="form-subtitle">Share your creation with the developer community and internship recruiters.</p>
 
-            <form id="addProjectForm">
-                <div class="form-group">
-                    <label for="projectTitle">Project Title *</label>
-                    <input type="text" id="projectTitle" placeholder="e.g., Student Feedback System" required>
-                </div>
+          <form action="../backend/add-project.php" method="POST">
+    <div class="form-group">
+        <label for="projectTitle">Project Title *</label>
+        <input type="text" id="projectTitle" name="title" placeholder="e.g., Student Feedback System" required>
+    </div>
 
-                <div class="form-group">
-                    <label for="techStack">Technologies Used (Tech Stack) *</label>
-                    <input type="text" id="techStack" placeholder="e.g., PHP, MySQL, JavaScript, HTML/CSS" required>
-                </div>
+    <div class="form-group">
+        <label for="techStack">Technologies Used (Tech Stack) *</label>
+        <input type="text" id="techStack" name="tech_stack" placeholder="e.g., PHP, MySQL, JavaScript, HTML/CSS" required>
+    </div>
 
-                <div class="form-group">
-                    <label for="projectLink">Live Demo or GitHub Link</label>
-                    <input type="url" id="projectLink" placeholder="https://github.com/username/project">
-                </div>
+    <div class="form-group">
+        <label for="projectLink">Live Demo or GitHub Link</label>
+        <input type="url" id="projectLink" name="project_link" placeholder="https://github.com/username/project">
+    </div>
 
-                <div class="form-group">
-                    <label for="imageUrl">Project Screenshot / Image URL</label>
-                    <input type="url" id="imageUrl" placeholder="https://example.com/image.png">
-                </div>
+    <div class="form-group">
+        <label for="imageUrl">Project Screenshot / Image URL</label>
+        <input type="url" id="imageUrl" name="image_url" placeholder="https://example.com/image.png">
+    </div>
 
-                <div class="form-group">
-                    <label for="description">Project Description *</label>
-                    <textarea id="description" rows="5" placeholder="Explain what problem your project solves, key features, and implementation details..." required></textarea>
-                </div>
+    <div class="form-group">
+        <label for="description">Project Description *</label>
+        <textarea id="description" name="description" rows="5" placeholder="Explain what problem your project solves, key features, and implementation details..." required></textarea>
+    </div>
 
-                <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Publish Project</button>
-            </form>
+    <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Publish Project</button>
+</form>
         </div>
     </main>
-<a href="../backend/dashboard.php" class="btn-submit" style="text-decoration:none; width:auto; padding: 10px 20px;">Back to Your dashboard</a>
-        </div>
+   <a href="../backend/dashboard.php" class="btn-submit" style="text-decoration:none; width:auto; padding: 10px 20px;">Back to Your dashboard</a>
+    
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Ethio-Tech Hub. Built for Internship Showcase.</p>
