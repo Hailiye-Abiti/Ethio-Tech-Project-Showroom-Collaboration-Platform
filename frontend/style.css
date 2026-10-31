@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header .logo h2 {
+    color: #2563eb;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #4b5563;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+header nav a:hover, header nav a.active {
+    color: #2563eb;
+}
+
+header nav .btn-login {
+    background: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+header nav .btn-login:hover {
+    background: #1d4ed8;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-box input {
+    width: 70%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-box button {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-box button:hover {
+    background: #059669;
+}
+
+/* Main Container & Cards */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.container > h2 {
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.tech-badge {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.card-content h3 {
+    margin: 10px 0 8px 0;
+    font-size: 1.2rem;
+    color: #1f2937;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 12px;
+}
+
+.author {
+    font-size: 0.85rem;
+    color: #4b5563;
+}
+
+.btn-details {
+    text-decoration: none;
+    background: #f3f4f6;
+    color: #2563eb;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.btn-details:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f2937;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+/* Form Section Styling */
+.form-card {
+    background: white;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 35px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.form-subtitle {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.btn-submit {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-submit:hover {
+    background: #1d4ed8;
+}
+
+/* Detail Page Styles */
+.detail-container {
+    max-width: 900px;
+}
+
+.btn-back {
+    display: inline-block;
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.btn-back:hover {
+    color: #2563eb;
+}
+
+.project-detail-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.detail-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.detail-body {
+    padding: 30px;
+}
+
+.detail-body h1 {
+    margin: 12px 0 8px 0;
+    color: #1f2937;
+}
+
+.project-author {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.description-box h3, .comments-section h3 {
+    color: #1f2937;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.description-box p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn-github {
+    display: inline-block;
+    background: #1f2937;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-github:hover {
+    background: #111827;
+}
+
+/* Comments Styling */
+.comments-section {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.comment-form {
+    margin: 20px 0;
+}
+
+.comment-form input, .comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    outline: none;
+}
+
+.btn-comment {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-comment:hover {
+    background: #1d4ed8;
+}
+
+.comment-item {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #2563eb;
+    margin-top: 15px;
+}
+
+.comment-item h4 {
+    font-size: 0.95rem;
+    color: #1f2937;
+}
+
+.comment-item p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin: 5px 0;
+}
+/* Auth Pages Styling */
+.auth-card {
+    max-width: 450px !important;
+}
+
+.auth-redirect {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.auth-redirect a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-redirect a:hover {
+    text-decoration: underline;
+}
+.comment-date {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+/* --- Header & Theme Toggle Button Styles --- */
+header .logo a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-btn {
+    background: transparent;
+    border: 1px solid #d1d5db;
+    color: #4b5563;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: #f3f4f6;
+    color: #2563eb;
+}
+
+/* --- Dark Mode Variables & Classes --- */
+body.dark-mode {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+body.dark-mode header {
+    background-color: #1f2937;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+body.dark-mode header nav a {
+    color: #9ca3af;
+}
+
+body.dark-mode header nav a:hover, 
+body.dark-mode header nav a.active {
+    color: #60a5fa;
+}
+
+body.dark-mode .theme-btn {
+    border-color: #374151;
+    color: #9ca3af;
+}
+
+body.dark-mode .theme-btn:hover {
+    background: #374151;
+    color: #60a5fa;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .form-card,
+body.dark-mode .comments-section,
+body.dark-mode .comment-item {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .project-card img {
+    opacity: 0.9;
+}
+
+body.dark-mode .card-content h3,
+body.dark-mode .form-card h2,
+body.dark-mode .detail-body h1,
+body.dark-mode .description-box h3,
+body.dark-mode .comments-section h3,
+body.dark-mode .comment-item h4 {
+    color: #f9fafb;
+}
+
+body.dark-mode .card-content p,
+body.dark-mode .project-author,
+body.dark-mode .description-box p,
+body.dark-mode .comment-item p,
+body.dark-mode .form-subtitle {
+    color: #9ca3af;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea,
+body.dark-mode .comment-form input,
+body.dark-mode .comment-form textarea {
+    background-color: #111827;
+    border-color: #374151;
+    color: #f3f4f6;
+}
+
+body.dark-mode .tech-badge {
+    background: #1e3a8a;
+    color: #93c5fd;
+}
