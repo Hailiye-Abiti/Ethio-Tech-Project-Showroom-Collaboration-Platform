@@ -1,1 +1,82 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethio-Tech Project Showroom</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome ለIcons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <h2><i class="fa-solid fa-code"></i> EthioTech Hub</h2>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="add-project.html"><i class="fa-solid fa-plus"></i> Add Project</a>
+            <a href="login.html" class="btn-login">Login</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Discover Amazing Tech Projects in Ethiopia</h1>
+        <p>Explore, share, and collaborate on software projects built by local developers and students.</p>
+        
+        <!-- Search & Filter Bar -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by title or tech stack (e.g., React, PHP)...">
+            <button><i class="fa-solid fa-search"></i> Search</button>
+        </div>
+    </section>
+
+    <!-- Projects Grid Container -->
+    <main class="container">
+        <h2>Recent Projects</h2>
+        
+        <div class="projects-grid" id="projectsGrid">
+            
+            <!-- Sample Project Card 1 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x160" alt="Project Image">
+                <div class="card-content">
+                    <span class="tech-badge">PHP / MySQL</span>
+                    <h3>Student Feedback System</h3>
+                    <p>A web and desktop application designed for Wachemo University to collect and manage student feedback efficiently.</p>
+                    <div class="card-footer">
+                        <span class="author"><i class="fa-solid fa-user"></i> Hailiye Abiti</span>
+                        <a href="project-detail.html" class="btn-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sample Project Card 2 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x160" alt="Project Image">
+                <div class="card-content">
+                    <span class="tech-badge">Flutter / Dart</span>
+                    <h3>EthioMind Hub</h3>
+                    <p>An educational mobile app featuring historical, scientific knowledge cards and interactive quizzes.</p>
+                    <div class="card-footer">
+                        <span class="author"><i class="fa-solid fa-user"></i> Developer</span>
+                        <a href="project-detail.html" class="btn-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ethio-Tech Hub. Built for Internship Showcase.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
