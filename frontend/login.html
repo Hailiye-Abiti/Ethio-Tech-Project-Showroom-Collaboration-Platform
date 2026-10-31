@@ -1,1 +1,57 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EthioTech Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <h2><a href="index.html" style="text-decoration:none; color:inherit;"><i class="fa-solid fa-code"></i> EthioTech Hub</a></h2>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="add-project.html"><i class="fa-solid fa-plus"></i> Add Project</a>
+            <a href="login.html" class="btn-login active">Login</a>
+        </nav>
+    </header>
+
+    <!-- Login Form Container -->
+    <main class="container">
+        <div class="form-card auth-card">
+            <h2><i class="fa-solid fa-right-to-bracket"></i> Welcome Back</h2>
+            <p class="form-subtitle">Login to your account to manage and post projects.</p>
+
+            <form action="login.php" method="POST">
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="e.g., hailiye@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="btn-submit"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button>
+            </form>
+
+            <p class="auth-redirect">
+                Don't have an account? <a href="register.html">Register here</a>
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 EthioTech Hub. Built for Internship Showcase.</p>
+    </footer>
+
+</body>
+</html>
