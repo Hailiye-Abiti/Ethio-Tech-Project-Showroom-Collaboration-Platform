@@ -1,11 +1,18 @@
+<?php
+require_once 'backend/db.php';
 
+// ከዳታቤዝ ሁሉንም የተመዘገቡ ፕሮጀክቶች ከነ ዩዘራቸው ስም ጋር ማምጣት
+$stmt = $conn->prepare("SELECT projects.*, users.username FROM projects JOIN users ON projects.user_id = users.id ORDER BY projects.created_at DESC");
+$stmt->execute();
+$projects = $stmt->get_result();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethio-Tech Project Showroom</title>
-   <link rel="stylesheet" href="frontend/style.css">
+    <link rel="stylesheet" href="frontend/style.css">
     <!-- FontAwesome ለIcons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -14,15 +21,19 @@
     <!-- Navigation Bar -->
     <header>
         <div class="logo">
-            <h2><i class="fa-solid fa-code"></i> EthioTech Hub</h2>
+            <h2><a href="index.html" style="text-decoration:none; color:inherit;"><i class="fa-solid fa-code"></i> EthioTech Hub</a></h2>
         </div>
+        
         <nav>
             <a href="index.html" class="active">Home</a>
-            
-            <a href="frontend/login.html" class="btn-login">Login</a>
-             <button id="themeToggle" class="theme-btn" title="Toggle Dark/Light Mode">
+            <a href="frontend/login.html" class="btn-login">sign up/sign in</a>
+            <button id="themeToggle" class="theme-btn" title="Toggle Dark/Light Mode">
                 <i class="fa-solid fa-moon"></i>
             </button>
+            <div class="lang-switch" style="display: inline-flex; gap: 5px; margin-left: 15px;">
+    <button onclick="changeLanguage('en')" id="btnEn" style="background: #2563eb; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: bold;">EN</button>
+    <button onclick="changeLanguage('am')" id="btnAm" style="background: #e5e7eb; color: #374151; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: bold;">አማ</button>
+</div>
         </nav>
     </header>
 
@@ -43,35 +54,24 @@
         <h2>Recent Projects</h2>
         
         <div class="projects-grid" id="projectsGrid">
-            
-            <!-- Sample Project Card 1 -->
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x160" alt="Project Image">
-                <div class="card-content">
-                    <span class="tech-badge">PHP / MySQL</span>
-                    <h3>Student Feedback System</h3>
-                    <p>A web and desktop application designed for Wachemo University to collect and manage student feedback efficiently.</p>
-                    <div class="card-footer">
-                        <span class="author"><i class="fa-solid fa-user"></i> Hailiye Abiti</span>
-                        <a href="project-detail.html" class="btn-details">View Details</a>
+            <?php if ($projects->num_rows > 0): ?>
+                <?php while ($row = $projects->fetch_assoc()): ?>
+                    <div class="project-card">
+                        <img src="<?php echo !empty($row['image_url']) ? htmlspecialchars($row['image_url']) : 'https://via.placeholder.com/300x160'; ?>" alt="Project Image">
+                        <div class="card-content">
+                            <span class="tech-badge"><?php echo htmlspecialchars($row['tech_stack']); ?></span>
+                            <h3><?php echo htmlspecialchars($row['title']); ?></h3>
+                            <p><?php echo htmlspecialchars(substr($row['description'], 0, 100)) . '...'; ?></p>
+                            <div class="card-footer">
+                                <span class="author"><i class="fa-solid fa-user"></i> <?php echo htmlspecialchars($row['username']); ?></span>
+                                <a href="frontend/register.html" class="btn-details">View Details</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Sample Project Card 2 -->
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x160" alt="Project Image">
-                <div class="card-content">
-                    <span class="tech-badge">Flutter / Dart</span>
-                    <h3>EthioMind Hub</h3>
-                    <p>An educational mobile app featuring historical, scientific knowledge cards and interactive quizzes.</p>
-                    <div class="card-footer">
-                        <span class="author"><i class="fa-solid fa-user"></i> Developer</span>
-                        <a href="project-detail.html" class="btn-details">View Details</a>
-                    </div>
-                </div>
-            </div>
-
+                <?php endwhile; ?>
+            <?php else: ?>
+                <p style="grid-column: 1/-1; color: #6b7280; text-align: center; padding: 30px;">እስካሁን ምንም የተመዘገበ ፕሮጀክት የለም። ሎጊን በማድረግ የመጀመሪያውን ፕሮጀክት ያጋሩ!</p>
+            <?php endif; ?>
         </div>
     </main>
 
@@ -80,6 +80,6 @@
         <p>&copy; 2026 Ethio-Tech Hub. Built for Internship Showcase.</p>
     </footer>
 
-  <script src="frontend/script.js"></script>
+    <script src="frontend/script.js"></script>
 </body>
 </html>
