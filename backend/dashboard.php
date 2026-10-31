@@ -24,7 +24,7 @@ $myProjects = $stmt->get_result();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - EthioTech Hub</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../frontend/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -35,10 +35,10 @@ $myProjects = $stmt->get_result();
             <h2><a href="index.html"><i class="fa-solid fa-code"></i> EthioTech Hub</a></h2>
         </div>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="../index.html">Home</a>
             <a href="dashboard.php" class="active">Dashboard</a>
-            <a href="add-project.html"><i class="fa-solid fa-plus"></i> Add Project</a>
-            <a href="logout.php" class="btn-login" style="background:#ef4444;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            <a href="../frontend/add-project.html"><i class="fa-solid fa-plus"></i> Add Project</a>
+            <a href="../index.html" class="btn-login" style="background:#ef4444;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
             <button id="themeToggle" class="theme-btn"><i class="fa-solid fa-moon"></i></button>
         </nav>
     </header>
@@ -82,6 +82,6 @@ $myProjects = $stmt->get_result();
         <p>&copy; 2026 EthioTech Hub. Built for Internship Showcase.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../frontend/script.js"></script>
 </body>
 </html>
