@@ -24,10 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
            header("Location: dashboard.php"); // 
             exit();
         } else {
-            echo "<script>alert('የተሳሳተ ፓስወርድ አስገብተዋል!'); window.location.href='login.html';</script>";
+            echo "<script>alert('የተሳሳተ ፓስወርድ አስገብተዋል እባክዎ ደግመዉ በትክክል ያስገቡ!'); window.location.href='../frontend/login.html';</script>";
         }
     } else {
-        echo "<script>alert('በዚህ ኢሜይል የተመዘገበ አካውንት አልተገኘም!'); window.location.href='login.html';</script>";
+        echo "<script>alert('በዚህ ኢሜይል የተመዘገበ አካውንት አልተገኘም!በቅድሚያ ይመዝገቡ'); window.location.href='../frontend/register.html';</script>";
     }
 }
 ?>
