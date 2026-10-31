@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - EthioTech Hub</title>
+    <title>Add New Project - EthioTech Hub</title>
     <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,47 +13,63 @@
     <!-- Navigation Bar -->
     <header>
         <div class="logo">
-            <h2><a href="index.html" style="text-decoration:none; color:inherit;"><i class="fa-solid fa-code"></i> EthioTech Hub</a></h2>
+            <h2><i class="fa-solid fa-code"></i> EthioTech Hub</h2>
         </div>
         <nav>
             <a href="../index.html">Home</a>
-    
-            <a href="login.html" class="btn-login active">Login</a>
+            <a href="add-project.html" class="active"><i class="fa-solid fa-plus"></i> Add Project</a>
+            <a href="login.html" class="btn-login">Login</a>
              <button id="themeToggle" class="theme-btn" title="Toggle Dark/Light Mode">
                 <i class="fa-solid fa-moon"></i>
             </button>
+            <div class="lang-switch" style="display: inline-flex; gap: 5px;">
+    <button onclick="changeLanguage('en')" id="btnEn" style="background: #2563eb; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: bold;">EN</button>
+    <button onclick="changeLanguage('am')" id="btnAm" style="background: #e5e7eb; color: #374151; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: bold;">አማ</button>
+</div>
         </nav>
     </header>
 
-    <!-- Login Form Container -->
+    <!-- Form Section -->
     <main class="container">
-        <div class="form-card auth-card">
-            <h2><i class="fa-solid fa-right-to-bracket"></i> Welcome Back</h2>
-            <p class="form-subtitle">Login to your account to manage and post projects.</p>
+        <div class="form-card">
+            <h2><i class="fa-solid fa-folder-plus"></i> Submit Your Project</h2>
+            <p class="form-subtitle">Share your creation with the developer community and internship recruiters.</p>
 
-           <form action="../backend/login.php" method="POST">
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" placeholder="e.g., hailiye@gmail.com" required>
-                </div>
+          <form action="../backend/add-project.php" method="POST">
+    <div class="form-group">
+        <label for="projectTitle">Project Title *</label>
+        <input type="text" id="projectTitle" name="title" placeholder="e.g., Student Feedback System" required>
+    </div>
 
-                <div class="form-group">
-                    <label for="password">Password *</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
+    <div class="form-group">
+        <label for="techStack">Technologies Used (Tech Stack) *</label>
+        <input type="text" id="techStack" name="tech_stack" placeholder="e.g., PHP, MySQL, JavaScript, HTML/CSS" required>
+    </div>
 
-                <button type="submit" class="btn-submit"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button>
-            </form>
+    <div class="form-group">
+        <label for="projectLink">Live Demo or GitHub Link</label>
+        <input type="url" id="projectLink" name="project_link" placeholder="https://github.com/username/project">
+    </div>
 
-            <p class="auth-redirect">
-                Don't have an account? <a href="register.html">Register here</a>
-            </p>
+    <div class="form-group">
+        <label for="imageUrl">Project Screenshot / Image URL</label>
+        <input type="url" id="imageUrl" name="image_url" placeholder="https://example.com/image.png">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Project Description *</label>
+        <textarea id="description" name="description" rows="5" placeholder="Explain what problem your project solves, key features, and implementation details..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Publish Project</button>
+</form>
         </div>
     </main>
-
+   <a href="../backend/dashboard.php" class="btn-submit" style="text-decoration:none; width:auto; padding: 10px 20px;">Back to Your dashboard</a>
+    
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 EthioTech Hub. Built for Internship Showcase.</p>
+        <p>&copy; 2026 Ethio-Tech Hub. Built for Internship Showcase.</p>
     </footer>
  <script src="script.js"></script>
 </body>
