@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($stmt->execute()) {
             // ከተመዘገበ በኋላ በቀጥታ ወደ Login ገጽ መላክ (Redirect)
-            echo "<script>alert('በተ his ተመዝግበዋል! አሁን ይግቡ (Login)።'); window.location.href='login.html';</script>";
+           echo "<script>alert('በተሳካ ሁኔታ ተመዝግበዋል! አሁን ይግቡ (Login)።'); window.location.href='../frontend/login.html';</script>";
             exit();
         } else {
             echo "ስህተት ተፈጥሯል፡ " . $conn->error;
