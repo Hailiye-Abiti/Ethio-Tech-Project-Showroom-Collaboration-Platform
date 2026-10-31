@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['username'] = $user['username'];
 
             // ወደ Dashboard ገጽ Redirect ማድረግ
-            header("Location: dashboard.php");
+           header("Location: dashboard.php"); // 
             exit();
         } else {
             echo "<script>alert('የተሳሳተ ፓስወርድ አስገብተዋል!'); window.location.href='login.html';</script>";
