@@ -52,7 +52,7 @@ $myProjects = $stmt->get_result();
 
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
             <h2>My Projects</h2>
-            <a href="add-project.html" class="btn-submit" style="text-decoration:none; width:auto; padding: 10px 20px;">+ New Project</a>
+            <a href="../frontend/add-project.html" class="btn-submit" style="text-decoration:none; width:auto; padding: 10px 20px;">+ New Project</a>
         </div>
 
         <!-- Projects Grid -->
